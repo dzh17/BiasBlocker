@@ -1,0 +1,138 @@
+{
+    "manifest_version": 2,
+    "name": "BiasBlocker",
+    "description": "Eliminate the biasness of articles",
+    "version": "1.0",
+    "browser_action": {
+        "default_title": "BiasBlocker",
+        "default_popup": "int/index.html"
+    },
+    "icons": {
+       "128": "BiasBlocker-128.png" 
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://news.am/eng/search/?q=azerbaijan"
+            ],
+            "js": [
+                "am/news/parser.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://news.am/eng/news/**.html"
+            ],
+            "js": [
+                "am/news/file.js"
+            ]
+        },
+        {
+            "matches": [
+                "http://arka.am/en/search/**"
+            ],
+            "js": [
+                "am/arka/parser.js"
+            ]
+        },
+        {
+            "matches": [
+                "http://arka.am/en/news/**"
+            ],
+            "js": [
+                "am/arka/file.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://arminfo.info/news.php?**"
+            ],
+            "js": [
+                "am/arminfo/parser.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://arminfo.info/full_news.php?**"
+            ],
+            "js": [
+                "am/arminfo/file.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://www.aysor.am/en/news/Karabakh/**"
+            ],
+            "js": [
+                "am/aysor/parser.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://www.aysor.am/en/news/2020/**"
+            ],
+            "js": [
+                "am/aysor/file.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://armenpress.am/eng/news/artshakh**"
+            ],
+            "js": [
+                "am/armpress/parser.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://armenpress.am/eng/news/**.html"
+            ],
+            "js": [
+                "am/armpress/file.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://azertag.az/en/axtarish?search=armenia**"
+            ],
+            "js": [
+                "az/azertag/parser.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://azertag.az/en/xeber/**"
+            ],
+            "js": [
+                "az/azertag/file.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://report.az/en/**"
+            ],
+            "js": [
+                "az/report/file.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://en.trend.az/**"
+            ],
+            "js": [
+                "az/trend/file.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://www.theguardian.com/**"
+            ],
+            "js": [
+                "int/overlay.js"
+            ],
+            "css" : [
+                "int/external.css"
+            ]
+        }
+    ]
+}

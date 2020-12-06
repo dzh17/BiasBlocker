@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
+:root {
+    --cloud_100: #B7B1B1;
+    --cloud_200: #707070;
+}
+
+.nobias-wrapper {
+    position: fixed;
+    z-index: 1000000000000;
+    top: 4px;
+    right: 4px;
+    width: 680px;
+    height: 672px;
+    background-color:rgba(255, 255, 255, 1.0);
+    border-radius: 4px;
+    border: 1px solid var(--cloud_100);
+    font-family: 'PT Serif', serif;
+}
+
+.nobias-confilct {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border-bottom: 1px solid var(--cloud_100);
+    font-weight: bold;
+}
+
+.nobias-ext {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 32px);
+}
+
+.nobias-topic {
+    width: 100%;
+    height: 50px;
+}
+
+.nobias-ext-short {
+    position: fixed;
+    top: 4px;
+    right: 4px;
+    width: 100px;
+    height: 100px;
+    z-index: 1000000000000;
+}
+
+
+#long-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 50px;
+}
+
+#short-close-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.fade-in {
+    animation: fadeIn ease 0.5s;
+    -webkit-animation: fadeIn ease 0.5s;
+    -moz-animation: fadeIn ease 0.5s;
+    -o-animation: fadeIn ease 0.5s;
+    -ms-animation: fadeIn ease 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes opacityFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.nobias-column {
+    width: 50%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.nobias-header {
+    height: 32px;
+    border-bottom:1px solid var(--cloud_100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nobias-content {
+    position: relative;
+    height: calc(100% - 32px);
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.nobias-item {
+    width: calc(100% - 16px);
+    height: 172px;
+    margin-bottom: 20px;
+}
+
+.nobias-news {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 4px;
+    margin-left: 8px;
+    margin-bottom: 4px;
+    overflow: hidden;
+    box-shadow:0px 3px 8px 0 rgba(219, 219, 219, 0.56);
+    border:0.25px solid #d6d6d6;
+}
+
+.nobias-news:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.nobias-news-header {
+    font-size: 12px;
+    max-height: 48px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.nobias-news-site {
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: 700;
+}
+
+.nobias-news-media {
+    display: flex;
+    margin-top: 8px;
+}
+
+.nobias-news-content {
+    display: -webkit-box;
+    max-width: 220px;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 16px;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--cloud_200);
+}
+
+.nobias-news-image {
+    width: 80px;
+    height: 80px;
+    margin-left: 8px;
+}
+
+.nobias-news-link {
+    color: #3D7E9A;
+    text-decoration: none;
+    line-height: 16px;
+}
+
+#loader-1{
+    position: absolute;
+    top: 300px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader-2 {
+    position: absolute;
+    top: 300px;
+    left: calc(50%);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nobias-status {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@keyframes moveLeft {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -360px;
+    }
+}
+
+.nobias-full-article {
+    width: 100%;
+    height: 100%;
+}
+
+.nobias-article-header {
+    width: 100%;
+    height: 64px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    padding: 8px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.nobias-article-source {
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.nobias-article-image,
+.nobias-article-content {
+    width: calc(100% - 16px);
+    margin: 0 auto;
+    margin-top: 8px;
+}
+
+.nobias-article-content {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.nobias-article-image img {
+    width: 100%;
+}
+
+.nobias-readmore {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 12px;
+    color: #3D7E9A;
+}
+
+body p ,
+h1, h2, h3, h4, h5, h6 {
+    background: linear-gradient(to right, rgba(255,255,255,0) 50%, rgb(187, 192, 240) 50%);
+    background-size: 200%;
+    background-position: 0 0;
+    display: inline-block;
+    transition-delay: 0.25s;
+    transition: 3s ease-in-out;
+}
+  
